@@ -16,6 +16,15 @@ public:
     double UsdToGbp(double AmountOfUsd);
     double UsdToEur(double AmountOfUsd);
 };
+class EgpTo :public CurrencyConverter
+{
+public:
+    double EgpToUsd(double AmountEgp);
+    double EgpToSar(double AmountEgp);
+    double EgpToGbp(double AmountEgp);
+    double EgpToEur(double AmountEgp);
+};
+// functions of UsdTo
 UsdTo::UsdTo()
 {
     usd =1 , gbp = 0.80754721 ,egp = 30.999159 , sar = 3.75 , eur = 0.93794089 ;
@@ -39,6 +48,25 @@ double UsdTo ::UsdToSar(double AmountOfUsd) {
     return res ;
 }
 
+//function of EgpTo
+
+double EgpTo::EgpToUsd(double AmountEgp) {
+    double res = (AmountEgp * usd ) ;
+    return res;
+}
+double EgpTo::EgpToSar(double AmountEgp)
+{
+    double res = (AmountEgp * sar );
+    return res;
+}
+double EgpTo ::EgpToEur(double AmountEgp) {
+    double res = AmountEgp * eur ;
+    return res ;
+}
+double EgpTo ::EgpToGbp(double AmountEgp) {
+    double res =AmountEgp * gbp ;
+    return res ;
+}
 int main()
 {
     int choice1 ;
