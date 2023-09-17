@@ -8,7 +8,7 @@ class CurrencyConverter
 protected:
     double  usd ,eur ,  egp , gbp , sar ;
 };
-//
+//UsdTo class
 class UsdTo:public CurrencyConverter
 {
 public:
@@ -18,6 +18,7 @@ public:
     double UsdToGbp(double AmountOfUsd);
     double UsdToEur(double AmountOfUsd);
 };
+// SarTo class
 class SarTo : public CurrencyConverter
 {
     SarTo();
@@ -26,7 +27,20 @@ class SarTo : public CurrencyConverter
     double SarToGbp(double AmountOfSar);
     double SarToEur(double AmountOfSar);
 };
-// UsdTo Function members
+
+//EgpTo class
+
+class EgpTo :public CurrencyConverter
+{
+public:
+    EgpTo();
+    double EgpToUsd(double AmountEgp);
+    double EgpToSar(double AmountEgp);
+    double EgpToGbp(double AmountEgp);
+    double EgpToEur(double AmountEgp);
+};
+// functions of UsdTo
+
 UsdTo::UsdTo()
 {
     usd =1 , gbp = 0.80754721 ,egp = 30.999159 , sar = 3.75 , eur = 0.93794089 ;
@@ -50,6 +64,7 @@ double UsdTo ::UsdToSar(double AmountOfUsd) {
     return res ;
 }
 
+
 //SarTo Function members
 
 SarTo ::SarTo() {
@@ -71,6 +86,29 @@ double SarTo ::SarToGbp(double AmountOfSar) {
     double res = (AmountOfSar  * gbp );
     return gbp;
 }
+
+//function of EgpTo
+EgpTo ::EgpTo() {
+    egp = 1; gbp =0.026042718 , usd = 0.032356307 ,eur = 0.030366488 ,sar = 0.12133615 ;
+}
+double EgpTo::EgpToUsd(double AmountEgp) {
+    double res = (AmountEgp * usd ) ;
+    return res;
+}
+double EgpTo::EgpToSar(double AmountEgp)
+{
+    double res = (AmountEgp * sar );
+    return res;
+}
+double EgpTo ::EgpToEur(double AmountEgp) {
+    double res = AmountEgp * eur ;
+    return res ;
+}
+double EgpTo ::EgpToGbp(double AmountEgp) {
+    double res =AmountEgp * gbp ;
+    return res ;
+}
+
 int main()
 {
     int choice1 ;
