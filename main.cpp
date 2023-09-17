@@ -19,6 +19,7 @@ public:
 class EgpTo :public CurrencyConverter
 {
 public:
+    EgpTo();
     double EgpToUsd(double AmountEgp);
     double EgpToSar(double AmountEgp);
     double EgpToGbp(double AmountEgp);
@@ -49,7 +50,9 @@ double UsdTo ::UsdToSar(double AmountOfUsd) {
 }
 
 //function of EgpTo
-
+EgpTo ::EgpTo() {
+    egp = 1; gbp =0.026042718 , usd = 0.032356307 ,eur = 0.030366488 ,sar = 0.12133615 ;
+}
 double EgpTo::EgpToUsd(double AmountEgp) {
     double res = (AmountEgp * usd ) ;
     return res;
