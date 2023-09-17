@@ -2,11 +2,13 @@
 #define ll long long
 #define Endl endl
 using namespace std;
+// master class
 class CurrencyConverter
 {
 protected:
     double  usd ,eur ,  egp , gbp , sar ;
 };
+//
 class UsdTo:public CurrencyConverter
 {
 public:
@@ -16,6 +18,15 @@ public:
     double UsdToGbp(double AmountOfUsd);
     double UsdToEur(double AmountOfUsd);
 };
+class SarTo : public CurrencyConverter
+{
+    SarTo();
+    double SarToEgp(double AmountOfSar);
+    double SarToUsd(double AmountOfSar);
+    double SarToGbp(double AmountOfSar);
+    double SarToEur(double AmountOfSar);
+};
+// UsdTo Function members
 UsdTo::UsdTo()
 {
     usd =1 , gbp = 0.80754721 ,egp = 30.999159 , sar = 3.75 , eur = 0.93794089 ;
@@ -39,6 +50,27 @@ double UsdTo ::UsdToSar(double AmountOfUsd) {
     return res ;
 }
 
+//SarTo Function members
+
+SarTo ::SarTo() {
+    sar =1 ,usd =0.26666667 ,eur = 0.25026745 ,gbp = 0.21521123 ,egp = 8.2460536 ;
+}
+double SarTo ::SarToEgp(double AmountOfSar) {
+    double res = (AmountOfSar * egp );
+    return res;
+}
+double SarTo ::SarToEur(double AmountOfSar) {
+    double res = (AmountOfSar *eur );
+    return res ;
+}
+double SarTo ::SarToUsd(double AmountOfSar) {
+    double res = (AmountOfSar * usd );
+    return res ;
+}
+double SarTo ::SarToGbp(double AmountOfSar) {
+    double res = (AmountOfSar  * gbp );
+    return gbp;
+}
 int main()
 {
     int choice1 ;
