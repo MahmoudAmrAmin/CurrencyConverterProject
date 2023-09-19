@@ -49,6 +49,18 @@ public:
     double EurToGbp(double AmountEur);
     double EurToEgp(double AmountEur);
 };
+
+//class GbpTo
+
+class GbpTo : public CurrencyConverter
+{
+public:
+    GbpTo();
+    double GbpToEur (double AmountOfGbp);
+    double GbpToEgp (double AmountOfGbp);
+    double GbpToUsd (double AmountOfGbp);
+    double GbpToSar (double AmountOfGbp);
+};
 // functions of UsdTo
 
 UsdTo::UsdTo()
@@ -139,6 +151,28 @@ double EurTo ::EurToSar(double AmountEur) {
 }
 double EurTo ::EurToUsd(double AmountEur) {
     double res = (AmountEur * usd );
+    return res ;
+}
+
+// members functions of GbpTo class
+
+GbpTo ::GbpTo() {
+    gbp =1  ,usd = 1.2390887 ,sar = 4.6465828 , egp = 38.294058 , eur = 1.1602676;
+}
+double GbpTo ::GbpToEgp(double AmountOfGbp) {
+    double res = (AmountOfGbp * egp );
+    return res ;
+}
+double GbpTo ::GbpToUsd(double AmountOfGbp) {
+    double res = (AmountOfGbp * usd );
+    return res ;
+}
+double GbpTo ::GbpToEur(double AmountOfGbp) {
+    double res = (AmountOfGbp * eur );
+    return res ;
+}
+double GbpTo ::GbpToSar(double AmountOfGbp) {
+    double res  (AmountOfGbp * sar );
     return res ;
 }
 
