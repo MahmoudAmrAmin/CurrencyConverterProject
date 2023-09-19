@@ -39,6 +39,16 @@ public:
     double EgpToGbp(double AmountEgp);
     double EgpToEur(double AmountEgp);
 };
+//class EurTo
+class EurTo :public  CurrencyConverter
+{
+public:
+    EurTo();
+    double EurToUsd(double AmountEur);
+    double EurToSar(double AmountEur);
+    double EurToGbp(double AmountEur);
+    double EurToEgp(double AmountEur);
+};
 // functions of UsdTo
 
 UsdTo::UsdTo()
@@ -88,6 +98,7 @@ double SarTo ::SarToGbp(double AmountOfSar) {
 }
 
 //function of EgpTo
+
 EgpTo ::EgpTo() {
     egp = 1; gbp =0.026042718 , usd = 0.032356307 ,eur = 0.030366488 ,sar = 0.12133615 ;
 }
@@ -106,6 +117,28 @@ double EgpTo ::EgpToEur(double AmountEgp) {
 }
 double EgpTo ::EgpToGbp(double AmountEgp) {
     double res =AmountEgp * gbp ;
+    return res ;
+}
+
+// function members EurTo
+
+EurTo::EurTo() {
+    eur = 1  , egp =33.000058 ,sar = 4.0049786 , gbp = 0.86180361 ,usd = 1.0679609 ;
+}
+double EurTo ::EurToEgp(double AmountEur) {
+    double res = (AmountEur * egp );
+    return res ;
+}
+double EurTo ::EurToGbp(double AmountEur) {
+    double res = (AmountEur * gbp );
+    return res ;
+}
+double EurTo ::EurToSar(double AmountEur) {
+    double res = (AmountEur * sar );
+    return res ;
+}
+double EurTo ::EurToUsd(double AmountEur) {
+    double res = (AmountEur * usd );
     return res ;
 }
 
@@ -156,5 +189,4 @@ int main()
            cout<<ob1.UsdToGbp(AmountOfMoney)<<" Gbp "<<endl;
        }
     }
-
 }
