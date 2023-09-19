@@ -179,7 +179,11 @@ double GbpTo ::GbpToSar(double AmountOfGbp) {
 int main()
 {
     int choice1 ;
-    cout<<"to convert from usd enter : 1  "<<endl;
+    cout<<"enter 1 to convert from USD "<<Endl;
+    cout<<"enter 2 to convert from EGP "<<endl;
+    cout<<"enter 3 to convert from GBP "<<Endl;
+    cout<<"enter 4 to convert from SAR "<<endl;
+    cout<<"enter 5 to convert from EUR "<<Endl;
     cin>>choice1;
     if(choice1 == 1)
     {
@@ -222,5 +226,50 @@ int main()
            cout<<"amount of money after converting is ";
            cout<<ob1.UsdToGbp(AmountOfMoney)<<" Gbp "<<endl;
        }
+    }
+    else if (choice1 == 2)
+    {
+        int choice2;
+        cout<<"enter 1 to convert to USD "<<Endl;
+        cout<<"enter 2 to convert to GBP "<<Endl;
+        cout<<"enter 3 to convert to SAR "<<endl;
+        cout<<"enter 4 to convert to EUR "<<Endl;
+        cin >>choice2;
+        if(choice2 == 1 )
+        {
+            EgpTo ob;
+            double AmountOfEGP;
+            cout<<"enter amount of EGP "<<endl;
+            cin>>AmountOfEGP;
+            cout<<"amount of money after converting is :  "<<ob.EgpToUsd(AmountOfEGP)<<" USD "<<Endl;
+        }
+        else if(choice2 == 2 )
+        {
+            EgpTo ob;
+            double AmountOfEGP;
+            cout<<"enter amount of EGP "<<endl;
+            cin>>AmountOfEGP;
+            cout<<"amount of money after converting is :  "<<ob.EgpToGbp(AmountOfEGP)<<" GBP "<<Endl;
+        }
+        else if (choice2 == 3)
+        {
+            EgpTo ob;
+            double AmountOfEGP;
+            cout<<"enter amount of EGP "<<endl;
+            cin>>AmountOfEGP;
+            cout<<"amount of money after converting is :  "<<ob.EgpToSar(AmountOfEGP)<<" SAR "<<Endl;
+        }
+        else if (choice2 == 4)
+        {
+            EgpTo ob;
+            double AmountOfEGP;
+            cout<<"enter amount of EGP "<<endl;
+            cin>>AmountOfEGP;
+            cout<<"amount of money after converting is :  "<<ob.EgpToEur(AmountOfEGP)<<" EUR "<<Endl;
+        }
+        else
+        {
+            cout<<"invalid choice please check choices "<<endl;
+        }
     }
 }
