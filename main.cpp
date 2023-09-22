@@ -2,7 +2,7 @@
 #define ll long long
 #define Endl endl
 using namespace std;
-// master class
+// base class 
 class CurrencyConverter
 {
 protected:
