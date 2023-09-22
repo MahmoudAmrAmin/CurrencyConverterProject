@@ -2,6 +2,9 @@
 #define ll long long
 #define Endl endl
 using namespace std;
+
+
+//base class
 class CurrencyConverter
 {
 protected:
@@ -20,6 +23,7 @@ public:
 // SarTo class
 class SarTo : public CurrencyConverter
 {
+public:
     SarTo();
     double SarToEgp(double AmountOfSar);
     double SarToUsd(double AmountOfSar);
@@ -105,7 +109,7 @@ double SarTo ::SarToUsd(double AmountOfSar) {
 }
 double SarTo ::SarToGbp(double AmountOfSar) {
     double res = (AmountOfSar  * gbp );
-    return gbp;
+    return res;
 }
 
 //function of EgpTo
@@ -310,6 +314,51 @@ int main()
             cout<<"enter amount of GBP "<<endl;
             cin>>AmountOfGbp;
             cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.GbpToEur(AmountOfGbp)<<" EUR "<<endl;
+        }
+        else
+        {
+            cout<<"invalid choice please check choices "<<endl;
+        }
+    }
+    else if(choice1 == 4 )
+    {
+        int choice2 ;
+        cout<<"enter 1 to convert to USD "<<Endl;
+        cout<<"enter 2 to convert to EGP "<<Endl;
+        cout<<"enter 3 to convert to GBP "<<endl;
+        cout<<"enter 4 to convert to EUR "<<Endl;
+        cin >> choice2 ;
+        if (choice2 == 1)
+        {
+            SarTo ob;
+            double AmountOfSAR;
+            cout<<"enter amount of SAR "<<endl;
+            cin>>AmountOfSAR;
+            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.SarToUsd(AmountOfSAR)<<" USD "<<endl;
+        }
+        else if(choice2 == 2)
+        {
+            SarTo ob;
+            double AmountOfSAR;
+            cout<<"enter amount of SAR "<<endl;
+            cin>>AmountOfSAR;
+            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.SarToEgp(AmountOfSAR)<<" EGP "<<endl;
+        }
+        else if(choice2 == 3)
+        {
+            SarTo ob;
+            double AmountOfSAR;
+            cout<<"enter amount of SAR "<<endl;
+            cin>>AmountOfSAR;
+            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.SarToGbp(AmountOfSAR)<<" GBP "<<endl;
+        }
+        else if(choice2 == 4)
+        {
+            SarTo ob;
+            double AmountOfSAR;
+            cout<<"enter amount of SAR "<<endl;
+            cin>>AmountOfSAR;
+            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.SarToEur(AmountOfSAR)<<" EUR "<<endl;
         }
         else
         {
