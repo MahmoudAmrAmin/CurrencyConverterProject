@@ -58,7 +58,7 @@ public:
     GbpTo();
     double GbpToEur (double AmountOfGbp);
     double GbpToEgp (double AmountOfGbp);
-    double GbpToUsd (double AmountOfGbp);
+    double GbpToUsd (double & AmountOfGbp);
     double GbpToSar (double AmountOfGbp);
 };
 // functions of UsdTo
@@ -157,13 +157,13 @@ double EurTo ::EurToUsd(double AmountEur) {
 // members functions of GbpTo class
 
 GbpTo ::GbpTo() {
-    gbp =1  ,usd = 1.2390887 ,sar = 4.6465828 , egp = 38.294058 , eur = 1.1602676;
+    gbp =1  ,usd = 1.2265139,sar = 4.6465828 , egp =37.893792, eur = 1.1602676;
 }
 double GbpTo ::GbpToEgp(double AmountOfGbp) {
     double res = (AmountOfGbp * egp );
     return res ;
 }
-double GbpTo ::GbpToUsd(double AmountOfGbp) {
+double GbpTo ::GbpToUsd(double & AmountOfGbp) {
     double res = (AmountOfGbp * usd );
     return res ;
 }
@@ -266,6 +266,51 @@ int main()
             cout<<"enter amount of EGP "<<endl;
             cin>>AmountOfEGP;
             cout<<"amount of money after converting is :  "<<ob.EgpToEur(AmountOfEGP)<<" EUR "<<Endl;
+        }
+        else
+        {
+            cout<<"invalid choice please check choices "<<endl;
+        }
+    }
+    else if(choice1 == 3)
+    {
+        int choice2;
+        cout<<"enter 1 to convert to USD "<<Endl;
+        cout<<"enter 2 to convert to EGP "<<Endl;
+        cout<<"enter 3 to convert to SAR "<<endl;
+        cout<<"enter 4 to convert to EUR "<<Endl;
+        cin>> choice2;
+        if(choice2 == 1)
+        {
+            GbpTo ob;
+            double  AmountOfGbp;
+            cout<<"enter amount of GBP "<<endl;
+            cin>>AmountOfGbp;
+            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.GbpToUsd(AmountOfGbp)<<" USD "<<endl;
+        }
+        else if(choice2 == 2)
+        {
+            GbpTo ob;
+            double  AmountOfGbp;
+            cout<<"enter amount of GBP "<<endl;
+            cin>>AmountOfGbp;
+            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.GbpToEgp(AmountOfGbp)<<" EGP "<<endl;
+        }
+        else if(choice2 == 3)
+        {
+            GbpTo ob;
+            double  AmountOfGbp;
+            cout<<"enter amount of GBP "<<endl;
+            cin>>AmountOfGbp;
+            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.GbpToSar(AmountOfGbp)<<" SAR "<<endl;
+        }
+        else if(choice2 == 4)
+        {
+            GbpTo ob;
+            double  AmountOfGbp;
+            cout<<"enter amount of GBP "<<endl;
+            cin>>AmountOfGbp;
+            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.GbpToEur(AmountOfGbp)<<" EUR "<<endl;
         }
         else
         {
