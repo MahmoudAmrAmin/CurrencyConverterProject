@@ -2,9 +2,8 @@
 #define ll long long
 #define Endl endl
 using namespace std;
-
-
 //base class
+
 class CurrencyConverter
 {
 protected:
@@ -179,190 +178,200 @@ double GbpTo ::GbpToSar(double AmountOfGbp) {
     return res ;
 }
 
-int main()
-{
-    int choice1 ;
-    cout<<"enter 1 to convert from USD "<<Endl;
-    cout<<"enter 2 to convert from EGP "<<endl;
-    cout<<"enter 3 to convert from GBP "<<Endl;
-    cout<<"enter 4 to convert from SAR "<<endl;
-    cout<<"enter 5 to convert from EUR "<<Endl;
-    cin>>choice1;
-    if(choice1 == 1)
-    {
+int main() {
+    int choice1;
+    cout << "enter 1 to convert from USD " << Endl;
+    cout << "enter 2 to convert from EGP " << endl;
+    cout << "enter 3 to convert from GBP " << Endl;
+    cout << "enter 4 to convert from SAR " << endl;
+    cout << "enter 5 to convert from EUR " << Endl;
+    cin >> choice1;
+    if (choice1 == 1) {
         int choice2;
-       cout<<"enter : 1 to Egp  \nenter : 2 to Eur  \nenter : 3 to Sar  \nenter : 4 to Gbp "<<endl;
-       cin >>choice2;
-       if(choice2 == 1)
-       {
+        cout << "enter : 1 to Egp  \nenter : 2 to Eur  \nenter : 3 to Sar  \nenter : 4 to Gbp " << endl;
+        cin >> choice2;
+        if (choice2 == 1) {
             double AmountOfMoney;
             UsdTo ob1;
-            cout<<"enter amount of USD "<<Endl;
-            cin>> AmountOfMoney ;
-            cout<<"amount of money after converting is ";
-            cout<<ob1.UsdToEgp(AmountOfMoney)<<" Egp "<<endl;
-       }
-       else if(choice2 == 2)
-       {
-           double AmountOfMoney;
-           UsdTo ob1;
-           cout<<"enter amount of USD "<<Endl;
-           cin>> AmountOfMoney ;
-           cout<<"amount of money after converting is ";
-           cout<<ob1.UsdToEur(AmountOfMoney)<<" Eur "<<endl;
-       }
-       else if( choice2 == 3)
-       {
-           double AmountOfMoney;
-           UsdTo ob1;
-           cout<<"enter amount of USD "<<Endl;
-           cin>> AmountOfMoney ;
-           cout<<"amount of money after converting is ";
-           cout<<ob1.UsdToSar(AmountOfMoney)<<" Sar "<<endl;
-       }
-       else
-       {
-           double AmountOfMoney;
-           UsdTo ob1;
-           cout<<"enter amount of USD "<<Endl;
-           cin>> AmountOfMoney ;
-           cout<<"amount of money after converting is ";
-           cout<<ob1.UsdToGbp(AmountOfMoney)<<" Gbp "<<endl;
-       }
+            cout << "enter amount of USD " << Endl;
+            cin >> AmountOfMoney;
+            cout << "amount of money after converting is ";
+            cout << ob1.UsdToEgp(AmountOfMoney) << " Egp " << endl;
+        } else if (choice2 == 2) {
+            double AmountOfMoney;
+            UsdTo ob1;
+            cout << "enter amount of USD " << Endl;
+            cin >> AmountOfMoney;
+            cout << "amount of money after converting is ";
+            cout << ob1.UsdToEur(AmountOfMoney) << " Eur " << endl;
+        } else if (choice2 == 3) {
+            double AmountOfMoney;
+            UsdTo ob1;
+            cout << "enter amount of USD " << Endl;
+            cin >> AmountOfMoney;
+            cout << "amount of money after converting is ";
+            cout << ob1.UsdToSar(AmountOfMoney) << " Sar " << endl;
+        } else {
+            double AmountOfMoney;
+            UsdTo ob1;
+            cout << "enter amount of USD " << Endl;
+            cin >> AmountOfMoney;
+            cout << "amount of money after converting is ";
+            cout << ob1.UsdToGbp(AmountOfMoney) << " Gbp " << endl;
+        }
     }
-    else if (choice1 == 2)
-    {
+    else if (choice1 == 2) {
         int choice2;
-        cout<<"enter 1 to convert to USD "<<Endl;
-        cout<<"enter 2 to convert to GBP "<<Endl;
-        cout<<"enter 3 to convert to SAR "<<endl;
-        cout<<"enter 4 to convert to EUR "<<Endl;
-        cin >>choice2;
-        if(choice2 == 1 )
-        {
+        cout << "enter 1 to convert to USD " << Endl;
+        cout << "enter 2 to convert to GBP " << Endl;
+        cout << "enter 3 to convert to SAR " << endl;
+        cout << "enter 4 to convert to EUR " << Endl;
+        cin >> choice2;
+        if (choice2 == 1) {
             EgpTo ob;
             double AmountOfEGP;
-            cout<<"enter amount of EGP "<<endl;
-            cin>>AmountOfEGP;
-            cout<<"amount of money after converting is :  "<<ob.EgpToUsd(AmountOfEGP)<<" USD "<<Endl;
-        }
-        else if(choice2 == 2 )
-        {
+            cout << "enter amount of EGP " << endl;
+            cin >> AmountOfEGP;
+            cout << "amount of money after converting is :  " << ob.EgpToUsd(AmountOfEGP) << " USD " << Endl;
+        } else if (choice2 == 2) {
             EgpTo ob;
             double AmountOfEGP;
-            cout<<"enter amount of EGP "<<endl;
-            cin>>AmountOfEGP;
-            cout<<"amount of money after converting is :  "<<ob.EgpToGbp(AmountOfEGP)<<" GBP "<<Endl;
-        }
-        else if (choice2 == 3)
-        {
+            cout << "enter amount of EGP " << endl;
+            cin >> AmountOfEGP;
+            cout << "amount of money after converting is :  " << ob.EgpToGbp(AmountOfEGP) << " GBP " << Endl;
+        } else if (choice2 == 3) {
             EgpTo ob;
             double AmountOfEGP;
-            cout<<"enter amount of EGP "<<endl;
-            cin>>AmountOfEGP;
-            cout<<"amount of money after converting is :  "<<ob.EgpToSar(AmountOfEGP)<<" SAR "<<Endl;
-        }
-        else if (choice2 == 4)
-        {
+            cout << "enter amount of EGP " << endl;
+            cin >> AmountOfEGP;
+            cout << "amount of money after converting is :  " << ob.EgpToSar(AmountOfEGP) << " SAR " << Endl;
+        } else if (choice2 == 4) {
             EgpTo ob;
             double AmountOfEGP;
-            cout<<"enter amount of EGP "<<endl;
-            cin>>AmountOfEGP;
-            cout<<"amount of money after converting is :  "<<ob.EgpToEur(AmountOfEGP)<<" EUR "<<Endl;
+            cout << "enter amount of EGP " << endl;
+            cin >> AmountOfEGP;
+            cout << "amount of money after converting is :  " << ob.EgpToEur(AmountOfEGP) << " EUR " << Endl;
+        } else {
+            cout << "invalid choice please check choices " << endl;
         }
-        else
-        {
-            cout<<"invalid choice please check choices "<<endl;
-        }
+
     }
-    else if(choice1 == 3)
-    {
+    else if (choice1 == 3) {
         int choice2;
-        cout<<"enter 1 to convert to USD "<<Endl;
-        cout<<"enter 2 to convert to EGP "<<Endl;
-        cout<<"enter 3 to convert to SAR "<<endl;
-        cout<<"enter 4 to convert to EUR "<<Endl;
-        cin>> choice2;
-        if(choice2 == 1)
-        {
+        cout << "enter 1 to convert to USD " << Endl;
+        cout << "enter 2 to convert to EGP " << Endl;
+        cout << "enter 3 to convert to SAR " << endl;
+        cout << "enter 4 to convert to EUR " << Endl;
+        cin >> choice2;
+        if (choice2 == 1) {
             GbpTo ob;
-            double  AmountOfGbp;
-            cout<<"enter amount of GBP "<<endl;
-            cin>>AmountOfGbp;
-            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.GbpToUsd(AmountOfGbp)<<" USD "<<endl;
-        }
-        else if(choice2 == 2)
-        {
+            double AmountOfGbp;
+            cout << "enter amount of GBP " << endl;
+            cin >> AmountOfGbp;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.GbpToUsd(AmountOfGbp)
+                 << " USD " << endl;
+        } else if (choice2 == 2) {
             GbpTo ob;
-            double  AmountOfGbp;
-            cout<<"enter amount of GBP "<<endl;
-            cin>>AmountOfGbp;
-            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.GbpToEgp(AmountOfGbp)<<" EGP "<<endl;
-        }
-        else if(choice2 == 3)
-        {
+            double AmountOfGbp;
+            cout << "enter amount of GBP " << endl;
+            cin >> AmountOfGbp;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.GbpToEgp(AmountOfGbp)
+                 << " EGP " << endl;
+        } else if (choice2 == 3) {
             GbpTo ob;
-            double  AmountOfGbp;
-            cout<<"enter amount of GBP "<<endl;
-            cin>>AmountOfGbp;
-            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.GbpToSar(AmountOfGbp)<<" SAR "<<endl;
-        }
-        else if(choice2 == 4)
-        {
+            double AmountOfGbp;
+            cout << "enter amount of GBP " << endl;
+            cin >> AmountOfGbp;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.GbpToSar(AmountOfGbp)
+                 << " SAR " << endl;
+        } else if (choice2 == 4) {
             GbpTo ob;
-            double  AmountOfGbp;
-            cout<<"enter amount of GBP "<<endl;
-            cin>>AmountOfGbp;
-            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.GbpToEur(AmountOfGbp)<<" EUR "<<endl;
-        }
-        else
-        {
-            cout<<"invalid choice please check choices "<<endl;
+            double AmountOfGbp;
+            cout << "enter amount of GBP " << endl;
+            cin >> AmountOfGbp;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.GbpToEur(AmountOfGbp)
+                 << " EUR " << endl;
+        } else {
+            cout << "invalid choice please check choices " << endl;
         }
     }
-    else if(choice1 == 4 )
+    else if (choice1 == 4) {
+        int choice2;
+        cout << "enter 1 to convert to USD " << Endl;
+        cout << "enter 2 to convert to EGP " << Endl;
+        cout << "enter 3 to convert to GBP " << endl;
+        cout << "enter 4 to convert to EUR " << Endl;
+        cin >> choice2;
+        if (choice2 == 1) {
+            SarTo ob;
+            double AmountOfSAR;
+            cout << "enter amount of SAR " << endl;
+            cin >> AmountOfSAR;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.SarToUsd(AmountOfSAR)
+                 << " USD " << endl;
+        } else if (choice2 == 2) {
+            SarTo ob;
+            double AmountOfSAR;
+            cout << "enter amount of SAR " << endl;
+            cin >> AmountOfSAR;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.SarToEgp(AmountOfSAR)
+                 << " EGP " << endl;
+        } else if (choice2 == 3) {
+            SarTo ob;
+            double AmountOfSAR;
+            cout << "enter amount of SAR " << endl;
+            cin >> AmountOfSAR;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.SarToGbp(AmountOfSAR)
+                 << " GBP " << endl;
+        } else if (choice2 == 4) {
+            SarTo ob;
+            double AmountOfSAR;
+            cout << "enter amount of SAR " << endl;
+            cin >> AmountOfSAR;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.SarToEur(AmountOfSAR)
+                 << " EUR " << endl;
+        } else {
+            cout << "invalid choice please check choices " << endl;
+        }
+    }
+    else if (choice1 == 5) {
+        EurTo ob;
+        int choice2;
+        cout << "enter 1 to convert to USD " << Endl;
+        cout << "enter 2 to convert to EGP " << Endl;
+        cout << "enter 3 to convert to SAR " << endl;
+        cout << "enter 4 to convert to GBP " << Endl;
+        cin >> choice2;
+        if (choice2 == 1) {
+            double AmountOfEur;
+            cout << "enter amount of EUR " << endl;
+            cin >> AmountOfEur;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.EurToUsd(AmountOfEur)
+                 << " USD " << endl;
+        } else if (choice2 == 2) {
+            double AmountOfEur;
+            cout << "enter amount of EUR " << endl;
+            cin >> AmountOfEur;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.EurToEgp(AmountOfEur)
+                 << " EGP " << endl;
+        } else if (choice2 == 3) {
+            double AmountOfEur;
+            cout << "enter amount of EUR " << endl;
+            cin >> AmountOfEur;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.EurToSar(AmountOfEur)
+                 << " SAR " << endl;
+        } else if (choice2 == 4) {
+            double AmountOfEur;
+            cout << "enter amount of EUR " << endl;
+            cin >> AmountOfEur;
+            cout << "amount of money after converting is :  " << setprecision(2) << fixed << ob.EurToGbp(AmountOfEur)
+                 << " GBP " << endl;
+        } else {
+            cout << "invalid choice please check choices " << endl;
+        }
+    }
+    else
     {
-        int choice2 ;
-        cout<<"enter 1 to convert to USD "<<Endl;
-        cout<<"enter 2 to convert to EGP "<<Endl;
-        cout<<"enter 3 to convert to GBP "<<endl;
-        cout<<"enter 4 to convert to EUR "<<Endl;
-        cin >> choice2 ;
-        if (choice2 == 1)
-        {
-            SarTo ob;
-            double AmountOfSAR;
-            cout<<"enter amount of SAR "<<endl;
-            cin>>AmountOfSAR;
-            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.SarToUsd(AmountOfSAR)<<" USD "<<endl;
-        }
-        else if(choice2 == 2)
-        {
-            SarTo ob;
-            double AmountOfSAR;
-            cout<<"enter amount of SAR "<<endl;
-            cin>>AmountOfSAR;
-            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.SarToEgp(AmountOfSAR)<<" EGP "<<endl;
-        }
-        else if(choice2 == 3)
-        {
-            SarTo ob;
-            double AmountOfSAR;
-            cout<<"enter amount of SAR "<<endl;
-            cin>>AmountOfSAR;
-            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.SarToGbp(AmountOfSAR)<<" GBP "<<endl;
-        }
-        else if(choice2 == 4)
-        {
-            SarTo ob;
-            double AmountOfSAR;
-            cout<<"enter amount of SAR "<<endl;
-            cin>>AmountOfSAR;
-            cout<<"amount of money after converting is :  "<<setprecision(2)<<fixed<<ob.SarToEur(AmountOfSAR)<<" EUR "<<endl;
-        }
-        else
-        {
-            cout<<"invalid choice please check choices "<<endl;
-        }
+        cout << "invalid choice please check choices " << endl;
     }
 }
